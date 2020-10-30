@@ -1,6 +1,53 @@
 $(function($) {
 	var field = new Array("phone");
 	var fieldTwo = new Array("size");
+	$("#call_contactWithMe").submit(function() {
+		var error = 0;
+		$("#call_contactWithMe").find(":input").each(function() {
+			for (var i = 0; i < field.length; i++) {
+				if ($(this).attr("name") == field[i]) {
+					if (!$(this).val()) {
+						$(this).css('background', 'red');
+						error = 1;
+					} else {
+						$(this).css('background', 'green');
+					}
+				}
+			}
+		})
+		if (error == 0) {
+			var $form = $("#call_send"),
+				s_phone = $form.find('input[name="phone"]').val(),
+				s_theme = $form.find('input[name="theme"]').val(),
+				s_messanger = $form.find('input[name="messanger"]').val(),
+				s_email = $form.find('input[name="email"]').val(),
+				s_desc = $form.find('input[name="desc"]').val(),
+				url = $form.attr('action');
+			$('#result').fadeIn(100);
+			$('.arcticmodal-container').hide(100);
+			$('.arcticmodal-overlay').hide(100);
+			$('#txt').fadeIn(100);
+			$('#result').html("Отправка...");
+			$('#txt').html("Заявка принята, наш менеджер свяжется с вами в течении 24 часов.");
+			$('#txt').fadeOut(2800);
+			$.post(url, {
+				phone: s_phone,
+				theme: s_theme,
+				messanger: s_messanger,
+				email: s_email,
+				desc: s_desc,
+			}).done(function(data) {
+				$('#result').html(data);
+				$(location).attr('href', 'thanks.html');
+			});
+			return false;
+		} else {
+			var err_text = "";
+			if (error == 1) err_text = "Не все обязательные поля заполнены!";
+			return false;
+		}
+	});
+
 	$("#call_send").submit(function() {
 		var error = 0;
 		$("#call_send").find(":input").each(function() {

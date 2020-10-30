@@ -29,18 +29,16 @@ include "mail.class.php";
 	}
 	
 	$m->Body("<br/>
-	
-	
-	
-	
+		
 	".(!empty($_POST['time'])?"<b>Длительность</b>: ".$_POST['time']."<br/>":"")."
 	".$pla."
 	".$vir."
 	".(!empty($_POST['phone'])?"<b>Телефон для связи</b>: ".$_POST['phone']."<br/>":"")."
-	".(isset($_POST['email'])&&!empty($_POST['email'])?"<b>email для связи</b>: ".$_POST['email']."<br/>":"")."");
+	".(isset($_POST['email'])&&!empty($_POST['email'])?"<b>email для связи</b>: ".$_POST['email']."<br/>":"")."
+	".(isset($_POST['messanger'])&&!empty($_POST['messanger'])?"<b>messanger</b>: ".$_POST['messanger']."<br/>":"")."
+	".(isset($_POST['email'])&&!empty($_POST['email'])?"<b>email</b>: ".$_POST['email']."<br/>":"")."
+	".(isset($_POST['desc'])&&!empty($_POST['desc'])?"<b>desc</b>: ".$_POST['desc']."<br/>":"")."");
 	$m->Send();
 	echo '<h3>Заявка отправлена.</h3>';       
-
-
 
 ?>

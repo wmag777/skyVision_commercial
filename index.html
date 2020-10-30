@@ -96,9 +96,6 @@
 
 <body>
 
-<!--<div class="start_load"><img src="img/small/start.jpg" width="960px" height="540px" alt=""/></div>-->
-<!--<div class="start_load"><img src="img/small/start.jpg" width="1300px" height="942px" alt=""/></div>-->
-
 <div class="h_wrap">
 	<div class="header">
 		<div class="wrapper">
@@ -160,6 +157,28 @@
 </div>
 
 <div style="display: none;">
+	<div id="contactWithMe">
+		<div class="mod1">
+			<div class="arcticmodal-close arcticmodal-close1"><img src="img/close.png" alt="" /></div>
+			<p class="mod1_h1">Оставить заявку</p>
+			<p class="mod1_h2">Укажите удобный вам способ связи и краткое описание ролика</p>
+			<form  method="post" action="mail/mail.php" id="call_contactWithMe">
+				<div class="mo_form">
+					<input type="text" name="name" placeholder="Имя" value="" />
+					<input type="text" name="phone" placeholder="+7 ( ___ ) ___-__-__" value="" /><br>
+					<input type="text" name="messanger" placeholder="Мессенджер для связи" value="" />
+					<input type="text" name="email" placeholder="E-mail" value="" /><br>
+					<textarea name="desc" cols="30" rows="10" placeholder="Описание ролика своими словами"></textarea>
+					<input type="hidden" name="theme" value="Прозрачная СМЕТА" />
+					<div class="clear"></div>
+					<input type="submit" value="Отправить" />
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div style="display: none;">
 	<div id="modal">
 		<div class="mod1">
 			<div class="arcticmodal-close arcticmodal-close1"><img src="img/close.png" alt="" /></div>
@@ -199,7 +218,7 @@
 
 				<div class="clear"></div>
 				<div class="mo_form">
-					<input type="text" id="mski" name="phone" placeholder="+7 ( ___ ) ___-__-__" value="" />
+					<input type="text" name="phone" placeholder="+7 ( ___ ) ___-__-__" value="" />
 					<input type="hidden" name="page" value="Страница Рекламы" />
 					<input type="hidden" name="theme" value="РАССЧИТАТЬ МОЙ ПРОЕКТ" />
 					<div class="clear"></div>
@@ -307,7 +326,7 @@
 			<p class="mod2_t1">Кроме этого, бюджет на производство видеоролика должен быть адекватен целям его использования, охвату вашей аудитории и бюджету на продвижение. Оптимальным соотношением затрат на производство и продвижение видеороликов считается 10/90 - для телерекламы и 50/50 для продвижения online</p>
 			<p class="mod2_t2">Мы свяжемся с вами в удобное для вас время. Пожалуйста, оставьте ваш контактный телефон!</p>
 			<form class="b9_form" method="post" action="mail/mail.php" id="call_send1">
-				<input type="text" id="mski1" name="phone" value="" placeholder="+7 ( ___ ) ___-__-__" />
+				<input type="text" name="phone" value="" placeholder="+7 ( ___ ) ___-__-__" />
 				<input type="hidden" name="page" value="Страница Рекламы" />
 				<input type="hidden" name="theme" value="ПЕРЕЗВОНИТЕ МНЕ" />
 				<input type="submit" value="Отправить" />
@@ -393,7 +412,11 @@
 		</div>
 	</div>
 	<div class="clear"></div>
-	<a class="b4_button" href="javascript:modal();">Получить смету</a>
+	<div class="b4_bottom">
+		<a class="b4_button" href="javascript:contactWithMe();">Рассчитать смету</a>
+		<a class="b4_download" href="smeta2020.pdf" target="_blank"><img src="img/b4_pdf.png" alt="Скачать пример сметы на видеоролик"><span>Скачать пример сметы</span></a>
+	</div>
+
 </div>
 <div class="clear"></div>
 <div class="block5">
@@ -404,16 +427,6 @@
 			заказов мы получаем от наших постоянных клиентов и клиентов, которые пришли к нам по рекомендации
 		</div>
 		<div class="clear"></div>
-		<ul>
-			<li><img src="img/y1.png" alt="" /></li>
-			<li><img src="img/y2.png" alt="" /></li>
-			<li><img src="img/y3.png" alt="" /></li>
-			<li><img src="img/y4.png" alt="" /></li>
-			<li><img src="img/y5.png" alt="" /></li>
-			<li><img src="img/y6.png" alt="" /></li>
-			<li><img src="img/y7.png" alt="" /></li>
-			<li><img src="img/y8.png" alt="" /></li>
-		</ul>
 	</div>
 </div>
 <div class="block6">
@@ -602,7 +615,7 @@
 			<div class="b7_line"></div>
 			<div class="text_block1">Оставьте ваши контакты и мы бесплатно проведем анализ вашего проекта, предложим концепцию рекламного ролика и рассчитаем его стоимость</div>
 			<form class="b7_form" method="post" action="mail/mail.php" id="call_send3">
-				<input type="text" id="mski3" name="phone" value="" placeholder="+7 ( ___ ) ___-__-__" />
+				<input type="text" name="phone" value="" placeholder="+7 ( ___ ) ___-__-__" />
 				<input type="hidden" name="page" value="Страница Рекламы" />
 				<input type="hidden" name="theme" value="ПЕРЕЗВОНИТЕ МНЕ" />
 				<input type="submit" value="Отправить" />
@@ -862,7 +875,7 @@
 		<div class="line1"></div>
 		<p class="b9_bottom_text">Готовы обсудить ваш проект? Оставьте свой номер,<br/> и мы позвоним вам в ближайшее время</p>
 		<form class="b9_form"  method="post" action="mail/mail.php" id="call_send4">
-			<input type="text" id="mski4" name="phone" value="" placeholder="+7 ( ___ ) ___-__-__" />
+			<input type="text" name="phone" value="" placeholder="+7 ( ___ ) ___-__-__" />
 			<input type="hidden" name="page" value="Страница Рекламы" />
 			<input type="hidden" name="theme" value="ПЕРЕЗВОНИТЕ МНЕ" />
 			<input type="submit" value="Отправить" />
@@ -1121,13 +1134,14 @@
 		</div>
 		<p class="b11_bottom_text">Приступим к изучению вашего проекта?</div>
 	<form class="b9_form" method="post" action="mail/mail.php" id="call_send5" style="margin-top:30px;">
-		<input type="text" id="mski5" name="phone" value="" placeholder="+7 ( ___ ) ___-__-__" />
+		<input type="text" name="phone" value="" placeholder="+7 ( ___ ) ___-__-__" />
 		<input type="hidden" name="page" value="Страница Рекламы" />
 		<input type="hidden" name="theme" value="ПЕРЕЗВОНИТЕ МНЕ" />
 		<input type="submit" value="Да, жду звонка!" />
 	</form>
 </div>
 </div>
+
 <div class="block12">
 	<div class="wrapper">
 		<p class="b12_h1">Наши принципы</p>
@@ -1187,7 +1201,7 @@
 		<div class="b13_op b13_op1">
 			<div class="b13_line b13_line1">
 				<!--<img class="b13_i4" src="img/citr.png" alt="" />
-				<!--img class="b13_i5" src="img/citr.png" alt="" />
+				<img class="b13_i5" src="img/citr.png" alt="" />
 				<img class="b13_i6" src="img/citr.png" alt="" /-->
 			</div><br/>
 
@@ -1236,8 +1250,8 @@
 		<div class="b13_op b13_op4">
 			<div class="b13_line b13_line2">
 				<!--<img class="b13_i7" src="img/citr.png" alt="" />
-				<!--img class="b13_i8" src="img/citr.png" alt="" />
-				<img class="b13_i9" src="img/citr.png" alt="" /-->
+				<img class="b13_i8" src="img/citr.png" alt="" />
+				<img class="b13_i9" src="img/citr.png" alt="" />-->
 			</div><br/>
 			Опыт работы в сфере дизайна, создания визуальных эффектов, моушн-графике
 			и 3D - более 5 лет. Создавал графику и спецэффекты для телевизионных программ, документальных фильмов, рекламных роликов и короткометражных фильмов.
@@ -1247,7 +1261,7 @@
 			<div class="b13_line b13_line2">
 				<!--img class="b13_i7" src="img/citr.png" alt="" /-->
 				<!--<img class="b13_i8" src="img/citr.png" alt="" />
-				<!--img class="b13_i9" src="img/citr.png" alt="" /-->
+				<img class="b13_i9" src="img/citr.png" alt="" /-->
 			</div><br/>
 			11 лет занимаюсь post production на телепроектах Первого канала, ТВ-3, Рен-ТВ, MTV, МУЗ-ТВ, Столица.
 			Сертифицированный специалист по монтажу и цветокоррекции в программах DaVinchi Resolve, AVID Media Composer, Speedgrade. Также свободно владею другими профессиональными программами для работы с видео: Final Cut Pro 7, Final Cut Pro X, Adobe Premiere и Adobe After Effects.
@@ -1267,7 +1281,7 @@
 		<div class="b13_bot_line"></div>
 		<p class="b13_bottom">У вас остались вопросы? Мы с радостью на них ответим!<br/> Оставьте свой номер и мы перезвоним в ближайшее время</p>
 		<form class="b9_form" method="post" action="mail/mail.php" id="call_send6">
-			<input type="text" id="mski6" name="phone" value="" placeholder="+7 ( ___ ) ___-__-__" />
+			<input type="text" name="phone" value="" placeholder="+7 ( ___ ) ___-__-__" />
 			<input type="hidden" name="page" value="Страница Рекламы" />
 			<input type="hidden" name="theme" value="ПЕРЕЗВОНИТЕ МНЕ" />
 			<input type="submit" value="Отправить" />
@@ -1295,14 +1309,7 @@
 
 <script>
 	jQuery(function($){
-		$("#mski").mask("+7 ( 999 ) 999-99-99");
-		$("#mski1").mask("+7 ( 999 ) 999-99-99");
-		$("#mski2").mask("+7 ( 999 ) 999-99-99");
-		$("#mski3").mask("+7 ( 999 ) 999-99-99");
-		$("#mski4").mask("+7 ( 999 ) 999-99-99");
-		$("#mski5").mask("+7 ( 999 ) 999-99-99");
-		$("#mski6").mask("+7 ( 999 ) 999-99-99");
-		$("#mski7").mask("+7 ( 999 ) 999-99-99");
+		$("input[name='phone']").mask("+7 ( 999 ) 999-99-99");
 	});
 </script>
 
@@ -1451,18 +1458,20 @@
 		});
 	} );
 
+	function contactWithMe(){
+		$('#contactWithMe').arcticmodal();
+	};
 
 	function modal(){
 		$('#modal').arcticmodal();
 	};
-
-
 
 	function modal1(){
 		$('#modal1').arcticmodal();
 		setTimeout(start_color_Video, 400);
 		// setInterval(playcom, 3400);
 	};
+
 	function modal2(){
 		$('#modal2').arcticmodal();
 	};
@@ -1472,10 +1481,6 @@
 		setTimeout(playcom2, 400);
 		// setInterval(playcom2, 3400);
 	};
-
-</script>
-
-<script>
 
 	/************************************************************/
 
