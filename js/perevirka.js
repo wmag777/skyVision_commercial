@@ -16,12 +16,13 @@ $(function($) {
 			}
 		})
 		if (error == 0) {
-			var $form = $("#call_send"),
+			var $form = $("#call_contactWithMe"),
 				s_phone = $form.find('input[name="phone"]').val(),
 				s_theme = $form.find('input[name="theme"]').val(),
+				s_name = $form.find('input[name="name"]').val(),
 				s_messanger = $form.find('input[name="messanger"]').val(),
 				s_email = $form.find('input[name="email"]').val(),
-				s_desc = $form.find('input[name="desc"]').val(),
+				s_desc = $form.find('textarea[name="desc"]').val(),
 				url = $form.attr('action');
 			$('#result').fadeIn(100);
 			$('.arcticmodal-container').hide(100);
@@ -33,10 +34,12 @@ $(function($) {
 			$.post(url, {
 				phone: s_phone,
 				theme: s_theme,
+				name: s_name,
 				messanger: s_messanger,
 				email: s_email,
 				desc: s_desc,
 			}).done(function(data) {
+				alert('done');
 				$('#result').html(data);
 				$(location).attr('href', 'thanks.html');
 			});
@@ -156,6 +159,7 @@ $(function($) {
 			return false;
 		}
 	});
+
 	$("#call_send0").submit(function() {
 		var error = 0;
 		$("#call_send0").find(":input").each(function() {
