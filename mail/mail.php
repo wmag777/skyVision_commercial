@@ -7,8 +7,8 @@ include "mail.class.php";
 
 	$m= new Mail('utf8');
 	$m->To($mail);
-	//$m->Bcc("sargon.4grad@mail.ru");
-	$m->Subject("Заявка");
+	$m->Bcc("alexerm777@gmail.com");
+	if(isset($_POST['theme'])){	$m->Subject("Заявка: ".$_POST['theme']);}else{	$m->Subject("Заявка");}
 	$pla = "";
 	$vir = "";
 	if ($_POST['plan1'] or $_POST['plan2'] or $_POST['plan3']) {
@@ -36,7 +36,8 @@ include "mail.class.php";
 	".(!empty($_POST['time'])?"<b>Длительность</b>: ".$_POST['time']."<br/>":"")."
 	".$pla."
 	".$vir."
-	".(!empty($_POST['phone'])?"<b>Телефон для связи</b>: ".$_POST['phone']."<br/>":"")."");
+	".(!empty($_POST['phone'])?"<b>Телефон для связи</b>: ".$_POST['phone']."<br/>":"")."
+	".(isset($_POST['email'])&&!empty($_POST['email'])?"<b>email для связи</b>: ".$_POST['email']."<br/>":"")."");
 	$m->Send();
 	echo '<h3>Заявка отправлена.</h3>';       
 

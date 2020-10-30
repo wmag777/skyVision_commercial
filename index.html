@@ -132,13 +132,14 @@
 				<p>цветокоррекция в Da Vinci</p>
 			</li>
 		</ul>
-		<div class="b1_look">
+		<a href="javascript:videoPlay('176524909');" class="b1_look">
 			<img src="img/b1_play.png" alt="play_button">
 			<p>Посмотрите наши работы за 2 минуты</p>
-		</div>
-		<form action="" class="b1_form">
+		</a>
+		<form method="post" action="mail/mail.php" id="call_send0" class="b1_form">
 			<span>Оставьте ваши контакты <br>и получите бесплатно 3 идеи ролика</span>
 			<input type="text" name="phone" placeholder="+7 ( ___ ) ___-__-__">
+			<input type="hidden" name="theme" value="ДАЙ МНЕ 3 ИДЕИ" />
 			<input type="email" name="email" placeholder="________@________"><br>
 			<button>Получить идеи сценария</button>
 		</form>
@@ -166,10 +167,7 @@
 			<p class="mod1_h2">Укажите необходимые параметры или просто оставьте свой номер телефона и мы перезвоним в ближайшее время</p>
 			<p class="mod1_t2">Длительность</p>
 			<form  method="post" action="mail/mail.php" id="call_send">
-				<p>
-					<input type="hidden" name="time"  id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-
-				</p>
+				<p><input type="hidden" name="time"  id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
 				<div class="mod1_block">
 					<span class="mb_left">0 с</span>
 					<span class="mb_right">10 мин</span>
@@ -1290,15 +1288,10 @@
 
 <link href="jquery.arcticmodal-0.3.css" type="text/css" rel="stylesheet"/>
 
-
 <script type="text/javascript" src="js/sly.js"></script>
 <script type="text/javascript" src="js/jquery.arcticmodal-0.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
 <script src="js/perevirka.js"></script>
-
-
-
-
 
 <script>
 	jQuery(function($){
@@ -1310,14 +1303,12 @@
 		$("#mski5").mask("+7 ( 999 ) 999-99-99");
 		$("#mski6").mask("+7 ( 999 ) 999-99-99");
 		$("#mski7").mask("+7 ( 999 ) 999-99-99");
-
 	});
 </script>
 
 <script>
 	/*global Sly */
 	jQuery(function ($) {
-
 
 		'use strict';
 
@@ -2359,97 +2350,4 @@
 	});
 </script>
 </body>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=1300">
-    <meta name = "format-detection" content = "telephone=no" />
-    <!--<link rel="shortcut icon" href="img/fav.png" type="image/x-icon">-->
-    <title>SKY VISION</title>
-    <link href="style.css" type="text/css" rel="stylesheet"/>
-    <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
-    <script src="../jquery.min.js"></script>
-    <script src="../jquery-ui.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("#movie_sound2").prop('muted', false);
-            $('.arcticmodal-close, .arcticmodal-overlay').click(function(){
-                $("#movie_sound1, #movie_sound2").prop('muted', true);
-            });
-            $('.sound_other').click(function(){
-                $("#movie_sound1").prop('muted', false);
-                $("#movie_sound2").prop('muted', true);
-            });
-        });
-    </script>
-    <!-- Код тега ремаркетинга Google -->
-    <!--------------------------------------------------
-    С помощью тега ремаркетинга запрещается собирать информацию, по которой можно идентифицировать личность пользователя. Также запрещается размещать тег на страницах с контентом деликатного характера. Подробнее об этих требованиях и о настройке тега читайте на странице http://google.com/ads/remarketingsetup.
-    --------------------------------------------------->
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        var google_conversion_id = 875053574;
-        var google_custom_params = window.google_tag_params;
-        var google_remarketing_only = true;
-        /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/875053574/?value=0&amp;guid=ON&amp;script=0"/>
-        </div>
-    </noscript>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function() {
-                try {
-                    w.yaCounter33688669 = new Ya.Metrika({
-                        id:33688669,
-                        clickmap:true,
-                        trackLinks:true,
-                        accurateTrackBounce:true,
-                        webvisor:true
-                    });
-                } catch(e) { }
-            });
-
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () { n.parentNode.insertBefore(s, n); };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else { f(); }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
-
-    <noscript><div><img src="https://mc.yandex.ru/watch/33688669" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-    <!-- /Yandex.Metrika counter -->
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-81662894-1', 'auto');
-        ga('require', 'displayfeatures');
-        ga('send', 'pageview');
-
-        /* Accurate bounce rate by time */
-        if (!document.referrer ||
-            document.referrer.split('/')[2].indexOf(location.hostname) != 0)
-            setTimeout(function(){
-                ga('send', 'event', 'Новый посетитель', location.pathname);
-            }, 15000);
-    </script>
-</head>
 </html>
