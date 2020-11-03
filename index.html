@@ -414,7 +414,7 @@
 	<div class="clear"></div>
 	<div class="b4_bottom">
 		<a class="b4_button" href="javascript:contactWithMe();">Рассчитать смету</a>
-		<a class="b4_download" href="smeta2020.pdf" target="_blank"><img src="img/b4_pdf.png" alt="Скачать пример сметы на видеоролик"><span>Скачать пример сметы</span></a>
+		<a class="b4_download" href="smeta2020.pdf" download="dowbnload"><img src="img/b4_pdf.png" alt="Скачать пример сметы на видеоролик"><span>Скачать пример сметы</span></a>
 	</div>
 
 </div>
@@ -483,11 +483,11 @@
 				</ul>
 			</div>
 
-			<div class="scrollbar">
-				<div class="handle">
-					<div class="mousearea"></div>
-				</div>
-			</div>
+<!--			<div class="scrollbar">-->
+<!--				<div class="handle">-->
+<!--					<div class="mousearea"></div>-->
+<!--				</div>-->
+<!--			</div>-->
 
 		</div>
 		<div class="clear"></div>
@@ -576,8 +576,8 @@
             </div>
         </div>
         <div class="clear"></div>
-        <div class="c_t1">Анализ</div>
-        <div class="c_t2">Разработка</div>
+        <div class="c_t1">Бриф</div>
+        <div class="c_t2">Расчёт</div>
         <div class="c_t3">Сделка</div>
         <div class="clear"></div>
         <div class="text_block tb1">
@@ -595,7 +595,7 @@
                 <div class="forg_r1_t1" style="margin-left:30px;">- Социальный статус</div>
                 <div class="forg_r1_t1" style="margin-left:30px;">- География</div>
                 <div class="forg_r1_t1" style="margin-left:30px;">- Интересы, увлечения</div>
-                <div class="forg_r1_t1"><b>&bull;</b> Охват (количество)</div>
+                <div class="forg_r1_t1"><b>&bull;</b> Охват</div>
             </div>
 
         </div>
@@ -645,7 +645,7 @@
 			<li>
 				<img src="img/r1.png" alt="" />
 				<p>Тритмент</p>
-				<span>Концепция ролика<br/> и план сценария.</span>
+				<span>Сценарий ролика<br/> и подборка референсов.</span>
 			</li>
 			<li>
 				<img src="img/r2.png" alt="" />
@@ -1393,53 +1393,53 @@
 		// ==========================================================================
 		//   Header example0
 		// ==========================================================================
-		var $example0 = $('#example0');
-		var $frame0 = $example0.find('.frame'); window.frr = $frame0;
-		var sly = new Sly($frame0, {
-			horizontal: 1,
-			itemNav: 'basic',
-			activateMiddle: 1,
-			smart: 1,
-			activateOn: 'click',
-			mouseDragging: 1,
-			touchDragging: 1,
-			releaseSwing: 1,
-			startAt: 0,
-			scrollBar: $example0.find('.scrollbar'),
-			scrollBy: 1,
-			pagesBar: $example0.find('.pages'),
-			activatePageOn: 'click',
-			speed: 200,
-			moveBy: 600,
-			elasticBounds: 1,
-			dragHandle: 1,
-			dynamicHandle: 1,
-			clickBar: 1,
-
-			// Buttons
-			forward: $example0.find('.forward'),
-			backward: $example0.find('.backward'),
-			prev: $example0.find('.prev'),
-			next: $example0.find('.next'),
-			prevPage: $example0.find('.prevPage'),
-			nextPage: $example0.find('.nextPage')
-		}).init();
-
-		// Method calling buttons
-		$example0.on('click', 'button[data-action]', function () {
-			var action = $(this).data('action');
-
-			switch (action) {
-				case 'add':
-					sly.add('<li>' + sly.items.length + '</li>');
-					break;
-				case 'remove':
-					sly.remove(-1);
-					break;
-				default:
-					sly[action]();
-			}
-		});
+		// var $example0 = $('#example0');
+		// var $frame0 = $example0.find('.frame'); window.frr = $frame0;
+		// var sly = new Sly($frame0, {
+		// 	horizontal: 1,
+		// 	itemNav: 'basic',
+		// 	activateMiddle: 1,
+		// 	smart: 1,
+		// 	activateOn: 'click',
+		// 	mouseDragging: 1,
+		// 	touchDragging: 1,
+		// 	releaseSwing: 1,
+		// 	startAt: 0,
+		// 	scrollBar: $example0.find('.scrollbar'),
+		// 	scrollBy: 1,
+		// 	pagesBar: $example0.find('.pages'),
+		// 	activatePageOn: 'click',
+		// 	speed: 200,
+		// 	moveBy: 600,
+		// 	elasticBounds: 1,
+		// 	dragHandle: 1,
+		// 	dynamicHandle: 1,
+		// 	clickBar: 1,
+		//
+		// 	// Buttons
+		// 	forward: $example0.find('.forward'),
+		// 	backward: $example0.find('.backward'),
+		// 	prev: $example0.find('.prev'),
+		// 	next: $example0.find('.next'),
+		// 	prevPage: $example0.find('.prevPage'),
+		// 	nextPage: $example0.find('.nextPage')
+		// }).init();
+		//
+		// // Method calling buttons
+		// $example0.on('click', 'button[data-action]', function () {
+		// 	var action = $(this).data('action');
+		//
+		// 	switch (action) {
+		// 		case 'add':
+		// 			sly.add('<li>' + sly.items.length + '</li>');
+		// 			break;
+		// 		case 'remove':
+		// 			sly.remove(-1);
+		// 			break;
+		// 		default:
+		// 			sly[action]();
+		// 	}
+		// });
 
 
 	});
@@ -1646,27 +1646,27 @@
 		$("html,body").css("padding-right","0px");
 	}
 
-	function mytog1() {
-		$('.b13_op1').slideToggle("slow");
-	}
-	function mytog2() {
-		$('.b13_op2').slideToggle("slow");
-	}
-	function mytog3() {
-		$('.b13_op3').slideToggle("slow");
-	}
-	function mytog4() {
-		$('.b13_op4').slideToggle("slow");
-	}
-	function mytog5() {
-		$('.b13_op5').slideToggle("slow");
-	}
-	function mytog6() {
-		$('.b13_op6').slideToggle("slow");
-	}
-	function mytog7() {
-		$('.b13_op7').slideToggle("slow");
-	}
+	// function mytog1() {
+	// 	$('.b13_op1').slideToggle("slow");
+	// }
+	// function mytog2() {
+	// 	$('.b13_op2').slideToggle("slow");
+	// }
+	// function mytog3() {
+	// 	$('.b13_op3').slideToggle("slow");ghb
+	// }
+	// function mytog4() {
+	// 	$('.b13_op4').slideToggle("slow");
+	// }
+	// function mytog5() {
+	// 	$('.b13_op5').slideToggle("slow");
+	// }
+	// function mytog6() {
+	// 	$('.b13_op6').slideToggle("slow");
+	// }
+	// function mytog7() {
+	// 	$('.b13_op7').slideToggle("slow");
+	// }
 
 	// $('.b13_cl1').click(function() {
 	//
