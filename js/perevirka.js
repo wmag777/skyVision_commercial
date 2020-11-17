@@ -39,7 +39,7 @@ $(function($) {
 				email: s_email,
 				desc: s_desc,
 			}).done(function(data) {
-				alert('done');
+				// alert('done');
 				$('#result').html(data);
 				$(location).attr('href', 'thanks.html');
 			});

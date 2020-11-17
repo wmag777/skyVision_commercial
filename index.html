@@ -7,10 +7,10 @@
     <meta name = "format-detection" content = "telephone=no" />
     <!--<link rel="shortcut icon" href="img/fav.png" type="image/x-icon">-->
     <title>SKY VISION</title>
-    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
     <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
-    <script src="../jquery.min.js"></script>
-    <script src="../jquery-ui.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $("#movie_sound2").prop('muted', false);
@@ -128,10 +128,12 @@
 				<p>цветокоррекция в Da Vinci</p>
 			</li>
 		</ul>
-		<a href="javascript:videoPlay('176524909');" class="b1_look">
-			<img src="img/b1_play.png" alt="play_button">
-			<p>Посмотрите наши работы за 2 минуты</p>
-		</a>
+		<div class="b1_video">
+			<a href="javascript:videoPlay('176524909');" >
+				<img src="img/play.png" alt="play_button">
+				Посмотрите наши работы за 2 минуты
+			</a>
+		</div>
 		<form method="post" action="mail/mail.php" id="call_send0" class="b1_form">
 			<span>Оставьте ваши контакты <br>и получите бесплатно 3 идеи ролика</span>
 			<input type="text" name="phone" placeholder="+7 ( ___ ) ___-__-__">
@@ -1435,7 +1437,7 @@
 		$('.tb2').css("display", "none");
 		$('.tb3').css("display", "none");
 
-		$('.block7').css("background-position", "0 0");
+		$('.block7').css("background-position", "0 -10px");
 	});
 
 	$('.cw2').click(function() {
